@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
   // Base URL for GitHub Pages (use '/' for custom domain)
@@ -12,6 +13,10 @@ export default defineConfig({
       },
     },
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'about.html'),
+      },
       output: {
         manualChunks: undefined,
       },

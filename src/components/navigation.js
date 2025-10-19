@@ -18,7 +18,7 @@ export class NavigationComponent {
         </div>
         
         <div class="nav-menu" id="nav-menu">
-          <a href="about.html" class="nav-link about-btn" aria-label="Learn about Hugselle">
+          <a href="/about" class="nav-link about-btn" aria-label="Learn about Hugselle">
             About
           </a>
         </div>

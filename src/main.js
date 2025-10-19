@@ -5,7 +5,7 @@ import './styles/responsive.css';
 
 // 🎯 SMILE LIMIT CONFIGURATION
 // Change this single number to update the daily smile limit everywhere
-const DAILY_SMILE_LIMIT = 100;
+const DAILY_SMILE_LIMIT = 3;
 
 import { stateManager } from './modules/state.js';
 import { QuoteManager } from './modules/quotes.js';

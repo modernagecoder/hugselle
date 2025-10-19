@@ -1,0 +1,98 @@
+/* Background Gradient Animation */
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Floating Icons - Removed for cleaner design */
+
+/* Button Click Animation */
+.button-clicked {
+  animation: buttonPulse 0.3s ease-out;
+}
+
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 10px 40px var(--color-shadow),
+                0 0 0 30px rgba(248, 187, 208, 0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Background Pulse Effect */
+.background-pulse {
+  animation: bgPulse 0.5s ease-out;
+}
+
+@keyframes bgPulse {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+/* Glow Effect */
+.glow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+              0 0 40px rgba(248, 187, 208, 0.6),
+              0 0 60px rgba(248, 187, 208, 0.4);
+}
+
+/* Fade In Animation - removed to prevent conflicts with quote card */
+
+/* Slide In Animation */
+.slide-in {
+  animation: slideIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Shake Animation for errors or attention */
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}

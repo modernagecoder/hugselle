@@ -1,0 +1,242 @@
+/* Mobile Styles (< 640px) */
+@media (max-width: 639px) {
+  .app-main {
+    padding: var(--spacing-sm);
+  }
+
+  .heading {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-lg);
+    padding: 0 var(--spacing-sm);
+  }
+
+  .main-button {
+    width: 160px;
+    height: 160px;
+    font-size: var(--font-size-lg);
+    padding: var(--spacing-md);
+  }
+
+  .quote-card {
+    width: 95%;
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+  }
+
+  .quote-text {
+    font-size: var(--font-size-xl);
+    min-height: 80px;
+    line-height: var(--line-height-normal);
+    padding: 0;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .loading-content {
+    padding: var(--spacing-lg);
+    min-width: 200px;
+  }
+
+  .loading-text {
+    font-size: var(--font-size-base);
+  }
+
+  .action-button {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: var(--font-size-base);
+    margin-top: var(--spacing-sm);
+  }
+
+  .smile-counter {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    margin-top: var(--spacing-md);
+  }
+
+  .modal {
+    width: 95%;
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+  }
+
+  .modal-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .identity-options {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-sm);
+  }
+
+  .identity-button {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: var(--font-size-base);
+    border-radius: 8px;
+  }
+
+  /* Ensure touch targets are at least 44x44px */
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Reduce spacing for mobile */
+  .spinner-medium .spinner {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Small Tablets (640px - 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+  .main-button {
+    width: 180px;
+    height: 180px;
+    font-size: var(--font-size-xl);
+  }
+
+  .quote-card {
+    width: 90%;
+    max-width: 500px;
+    padding: var(--spacing-xl);
+  }
+
+  .quote-text {
+    font-size: var(--font-size-2xl);
+    min-height: 100px;
+  }
+
+  .heading {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-xl);
+  }
+}
+
+/* Tablets (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-button {
+    width: 200px;
+    height: 200px;
+    font-size: var(--font-size-xl);
+  }
+
+  .quote-card {
+    width: 85%;
+    max-width: 550px;
+    padding: var(--spacing-xl);
+  }
+
+  .quote-text {
+    font-size: var(--font-size-3xl);
+    min-height: 110px;
+  }
+}
+
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) {
+  .main-button {
+    width: 200px;
+    height: 200px;
+    font-size: var(--font-size-xl);
+  }
+
+  .quote-card {
+    width: 600px;
+    padding: var(--spacing-xl);
+  }
+
+  .quote-text {
+    font-size: var(--font-size-3xl);
+    min-height: 120px;
+  }
+}
+
+/* Large Desktop (1280px and above) */
+@media (min-width: 1280px) {
+  .heading {
+    font-size: var(--font-size-4xl);
+  }
+
+  .main-button {
+    width: 220px;
+    height: 220px;
+    font-size: var(--font-size-xl);
+  }
+
+  .quote-card {
+    max-width: 650px;
+    padding: var(--spacing-xxl);
+  }
+
+  .quote-text {
+    font-size: var(--font-size-3xl);
+    min-height: 120px;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .heading {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .main-button {
+    width: 150px;
+    height: 150px;
+    font-size: 1.2rem;
+  }
+
+  .quote-card {
+    padding: var(--spacing-sm);
+  }
+
+  .quote-emoji {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .quote-text {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .floating-icon {
+    display: none;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+  .main-button,
+  .quote-card {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+  /* Keep the colorful theme even in dark mode */
+  /* This ensures the joyful aesthetic is maintained */
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+  }
+
+  .action-button {
+    display: none;
+  }
+
+  .quote-card {
+    box-shadow: none;
+    border: 2px solid #667eea;
+  }
+}

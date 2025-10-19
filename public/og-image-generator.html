@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hugselle - OG Image Generator</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    #canvas {
+      border: 2px solid #333;
+      display: block;
+      margin: 20px auto;
+      background: white;
+    }
+    .controls {
+      text-align: center;
+      margin: 20px;
+    }
+    button {
+      background: #FF6B9D;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    button:hover {
+      background: #FF4981;
+    }
+    .info {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="info">
+    <h1>🎨 Hugselle - Open Graph Image Generator</h1>
+    <p>This tool creates a simple Open Graph image for social media sharing.</p>
+    <p><strong>Size:</strong> 1200 x 630 pixels (perfect for Facebook, Twitter, LinkedIn)</p>
+  </div>
+
+  <canvas id="canvas" width="1200" height="630"></canvas>
+  
+  <div class="controls">
+    <button onclick="generateImage()">🎨 Generate Image</button>
+    <button onclick="download()">💾 Download as og-image.jpg</button>
+  </div>
+
+  <div class="info">
+    <h3>📝 Instructions:</h3>
+    <ol>
+      <li>Click "Generate Image" to create the image</li>
+      <li>Click "Download" to save it</li>
+      <li>Save the file as <code>og-image.jpg</code></li>
+      <li>Put it in your <code>public/</code> folder</li>
+      <li>Deploy your site!</li>
+    </ol>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    function generateImage() {
+      // Background gradient
+      const gradient = ctx.createLinearGradient(0, 0, 0, 630);
+      gradient.addColorStop(0, '#FF6B9D');
+      gradient.addColorStop(1, '#FF4981');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, 1200, 630);
+
+      // Add some decorative circles
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+      ctx.beginPath();
+      ctx.arc(200, 150, 100, 0, Math.PI * 2);
+      ctx.fill();
+      
+      ctx.beginPath();
+      ctx.arc(1000, 500, 150, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Main text - "Hugselle"
+      ctx.fillStyle = '#FFFFFF';
+      ctx.font = 'bold 120px Arial, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('Hugselle', 600, 250);
+
+      // Tagline
+      ctx.font = '48px Arial, sans-serif';
+      ctx.fillText('Your Daily Dose of Happiness', 600, 350);
+
+      // Emojis/Symbols
+      ctx.font = '80px Arial';
+      const emojis = ['😊', '💖', '✨', '🤗'];
+      let x = 300;
+      emojis.forEach(emoji => {
+        ctx.fillText(emoji, x, 480);
+        x += 200;
+      });
+
+      // Small text at bottom
+      ctx.font = '24px Arial';
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+      ctx.fillText('hugselle.modernagecoders.com', 600, 580);
+
+      alert('✅ Image generated! Click "Download" to save it.');
+    }
+
+    function download() {
+      // Check if image was generated
+      const imageData = ctx.getImageData(0, 0, 1, 1);
+      if (imageData.data[0] === 0 && imageData.data[1] === 0 && imageData.data[2] === 0) {
+        alert('⚠️ Please generate the image first!');
+        return;
+      }
+
+      const link = document.createElement('a');
+      link.download = 'og-image.jpg';
+      link.href = canvas.toDataURL('image/jpeg', 0.95);
+      link.click();
+      
+      alert('✅ Downloaded! Save it as "og-image.jpg" in your public/ folder');
+    }
+
+    // Generate on load
+    window.onload = function() {
+      generateImage();
+    };
+  </script>
+</body>
+</html>

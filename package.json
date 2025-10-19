@@ -1,0 +1,18 @@
+{
+  "name": "hugselle",
+  "version": "1.0.0",
+  "description": "A website that spreads joy, laughter, and light-hearted flirtiness",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "howler": "^2.2.4"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}

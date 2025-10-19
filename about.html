@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Hugselle - Your Daily Dose of Happiness</title>
+  <meta name="description" content="Learn about Hugselle and Modern Age Coders - dedicated to offering coding and mathematics education with a smile.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  
+  <!-- Preload fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-primary: #FF6B9D;
+      --color-secondary: #C44569;
+      --color-accent: #FFA07A;
+      --color-light: #FFF5F7;
+      --color-dark: #2C3E50;
+      --color-text: #34495E;
+      --color-text-light: #7F8C8D;
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 2rem;
+      --spacing-lg: 3rem;
+      --spacing-xl: 4rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: var(--color-text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .navigation {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-text {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-link {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nav-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+    }
+
+    .about-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .about-card {
+      background: white;
+      border-radius: 20px;
+      padding: 3rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 0.6s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .about-title {
+      font-size: 2.5rem;
+      color: var(--color-dark);
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .about-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .about-subtitle {
+      font-size: 1.5rem;
+      color: var(--color-secondary);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      color: var(--color-text);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .about-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .about-list li {
+      font-size: 1.1rem;
+      color: var(--color-text);
+      padding: 0.5rem 0;
+      padding-left: 2rem;
+      position: relative;
+    }
+
+    .about-list li:before {
+      content: "✨";
+      position: absolute;
+      left: 0;
+    }
+
+    .about-footer-text {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--color-text-light);
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 2px solid var(--color-light);
+    }
+
+    @media (max-width: 768px) {
+      .about-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .about-title {
+        font-size: 2rem;
+      }
+
+      .about-subtitle {
+        font-size: 1.3rem;
+      }
+
+      .about-text, .about-list li {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navigation">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <h1 class="brand-text">Hugselle</h1>
+      </div>
+      <a href="index.html" class="nav-link">Home</a>
+    </div>
+  </nav>
+
+  <div class="about-container">
+    <div class="about-card">
+      <h1 class="about-title">About Hugselle</h1>
+      
+      <div class="about-section">
+        <h2 class="about-subtitle">Our Mission</h2>
+        <p class="about-text">
+          Hugselle is created by <strong>Modern Age Coders</strong>, dedicated to offering 
+          coding and mathematics education to everyone. We believe that learning should be 
+          accessible, engaging, and empowering for all.
+        </p>
+      </div>
+      
+      <div class="about-section">
+        <h2 class="about-subtitle">Why Smiles Matter</h2>
+        <p class="about-text">
+          In this busy world, smiles are incredibly important. When life gets overwhelming 
+          and you forget your smile, come to us and feel the joy again. Hugselle is your 
+          daily dose of happiness, reminding you that even in the midst of learning and 
+          growing, there's always a reason to smile.
+        </p>
+      </div>
+      
+      <div class="about-section">
+        <h2 class="about-subtitle">What We Offer</h2>
+        <ul class="about-list">
+          <li>Comprehensive coding education for all skill levels</li>
+          <li>Mathematics courses designed for practical application</li>
+          <li>A supportive learning environment that celebrates progress</li>
+          <li>Daily motivation and positivity to keep you inspired</li>
+        </ul>
+      </div>
+
+      <p class="about-footer-text">
+        Ready to start your learning journey with a smile? 
+        <br>Let Hugselle brighten your path to knowledge!
+      </p>
+    </div>
+  </div>
+</body>
+</html>
